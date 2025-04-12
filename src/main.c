@@ -32,7 +32,13 @@ static void response_cb(struct http_response *rsp,
 
     LOG_INF("Response to %s", (const char *)user_data);
     LOG_INF("Response status %s", rsp->http_status);
-    LOG_INF("Payload: %s", rsp->data);
+    
+    // Fix: In Zephyr's HTTP client, response data is in the recv_buf, not in rsp->data
+    if (rsp->data_len > 0) {
+        LOG_INF("Payload: %.*s", (int)rsp->data_len, (char *)recv_buf);
+    } else {
+        LOG_INF("No payload received");
+    }
 }
 
 static int connect_to_firebase(void)

@@ -1,8 +1,8 @@
 #ifndef FIREBASE_CONFIG_H
 #define FIREBASE_CONFIG_H
 
-/* Firebase project details - REPLACE WITH YOUR OWN! */
-#define FIREBASE_HOST        "https://rtos-11b4c-default-rtdb.europe-west1.firebasedatabase.app/" 
+/* Firebase project details */
+#define FIREBASE_HOST        "rtos-11b4c-default-rtdb.europe-west1.firebasedatabase.app" 
 #define FIREBASE_API_KEY     "Xw0b1rOhpIxIgS9wYn08YD0CJ1EhfNh5rvFUpCqP"
 #define FIREBASE_PROJECT_ID  "rtos-11b4c"
 
